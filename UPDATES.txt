@@ -1,0 +1,3 @@
+**config edit verison to allow downloadable update
+
+**band description to db as field
