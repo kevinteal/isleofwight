@@ -37,6 +37,24 @@ function add_to_plan2(e,method){
 		//remove current gaptime
 		$("#fav"+band_id).parent().parent().next().find(".gap_time").text("");
 		
+		
+		var siblings = $("#fav"+band_id).parent().parent().siblings().length;
+		if(siblings==2){
+			//console.log("ONLY ONE GONNA BE LEFT");
+			//only two bands left before removal. leaving just one. it should have no clash 
+			if(!pre_band){
+				//remove from next
+				$("#fav"+band_id).parent().parent().next().find(".clash_banner").remove();	
+					$("#fav"+band_id).parent().parent().next().find(".lineup_band").removeClass("clash_bands");
+			}
+			if(!next_band){
+				//remove from pre
+					$("#fav"+band_id).parent().parent().prev().find(".clash_banner").remove();	
+					$("#fav"+band_id).parent().parent().prev().find(".lineup_band").removeClass("clash_bands");
+			}
+		}
+		
+		
 		if(!pre_band){
 			//alert("no pre");
 			//check for clash with next with same band name
@@ -416,7 +434,7 @@ function set_up_main_page(){
 								}else{
 								
 									set_up_lineup_page();
-									$("#not_time").html("Band Times are not yet confirmed, make sure app is upto date before going to the festival. Thank you. <br/><br/>");
+									$("#not_time").html("Band Times are not yet confirmed, make sure app is up to date before going to the festival. Thank you. <br/><br/>");
 								}
 								
 						});
