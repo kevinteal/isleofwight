@@ -158,6 +158,56 @@ function set_up_band_db(){
 		//tx.executeSql('UPDATE bands SET start_time=1700 WHERE id=1');
 		//tx.executeSql('DELETE FROM bands WHERE id=74');
 		
+		
+		//bands change from friday to thurs on hard rock
+		tx.executeSql('UPDATE bands SET day=20150611, day_name="Thursday" WHERE id=64');
+		
+		//bands change from friday to saturday on hard rock stage
+		tx.executeSql('UPDATE bands SET day=20150613, day_name="Saturday" WHERE id=57');
+		tx.executeSql('UPDATE bands SET day=20150613, day_name="Saturday" WHERE id=59');
+		tx.executeSql('UPDATE bands SET day=20150613, day_name="Saturday" WHERE id=61');
+		tx.executeSql('UPDATE bands SET day=20150613, day_name="Saturday" WHERE id=62');
+		
+		//band change from friday to sunday hard rock stage.
+		tx.executeSql('UPDATE bands SET day=20150614, day_name="Sunday" WHERE id=54');
+		tx.executeSql('UPDATE bands SET day=20150614, day_name="Sunday" WHERE id=55');
+		tx.executeSql('UPDATE bands SET day=20150614, day_name="Sunday" WHERE id=56');
+		tx.executeSql('UPDATE bands SET day=20150614, day_name="Sunday" WHERE id=63');
+		tx.executeSql('UPDATE bands SET day=20150614, day_name="Sunday" WHERE id=66');
+		
+		//bands to delete
+		tx.executeSql('DELETE FROM bands WHERE id=65');
+		
+		//bands to thurs hard rock
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (106, "Diesel Park West", "Hard Rock Stage", 20150611, 2200, 2300, 0, 2, "Thursday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (107, "30Ten", "Hard Rock Stage", 20150611, 2100, 2200, 0, 2, "Thursday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (108, "Nick Cane", "Hard Rock Stage", 20150611, 2000, 2100, 0, 2, "Thursday", "video_link_HERE")');
+		
+		//bands added friday hard rock
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (109, "Parker", "Hard Rock Stage", 20150612, 2200, 2300, 0, 2, "Friday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (110, "LiA", "Hard Rock Stage", 20150612, 2100, 2200, 0, 2, "Friday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (111, "Kerri Watt", "Hard Rock Stage", 20150612, 2000, 2100, 0, 2, "Friday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (112, "Arno Carstens", "Hard Rock Stage", 20150612, 1900, 2000, 0, 2, "Friday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (113, "Novatones", "Hard Rock Stage", 20150612, 1800, 1900, 0, 2, "Friday", "video_link_HERE")');
+		
+		//saturday bands added hard rock
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (114, "Eddie And The Robbers", "Hard Rock Stage", 20150613, 2200, 2300, 0, 2, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (115, "The Ravels", "Hard Rock Stage", 20150613, 2000, 2100, 0, 2, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (116, "Curran", "Hard Rock Stage", 20150613, 1900, 2000, 0, 2, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (117, "The Dirty Strangers", "Hard Rock Stage", 20150613, 1800, 1900, 0, 2, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (118, "Kenneth J Nash", "Hard Rock Stage", 20150613, 1700, 1800, 0, 2, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (119, "Fantasy", "Hard Rock Stage", 20150613, 1600, 1700, 0, 2, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (120, "Johnny Lucas", "Hard Rock Stage", 20150613, 1500, 1600, 0, 2, "Saturday", "video_link_HERE")');
+		
+		//sunday hard rock added bands
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (121, "The Soho Hobo", "Hard Rock Stage", 20150614, 2100, 2200, 0, 2, "Sunday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (122, "Skinny Living", "Hard Rock Stage", 20150614, 2000, 2100, 0, 2, "Sunday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (123, "Red Sky July", "Hard Rock Stage", 20150614, 1900, 2000, 0, 2, "Sunday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (124, "Los Pacaminos", "Hard Rock Stage", 20150614, 1800, 1900, 0, 2, "Sunday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (125, "The Nelson Brothers", "Hard Rock Stage", 20150614, 1700, 1800, 0, 2, "Sunday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (126, "Ella Janes", "Hard Rock Stage", 20150614, 1600, 1700, 0, 2, "Sunday", "video_link_HERE")');
+			tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (127, "Thundernauts", "Hard Rock Stage", 20150614, 1500, 1600, 0, 2, "Sunday", "video_link_HERE")');
+		
 		set_up_main_page();
 	});
 }
