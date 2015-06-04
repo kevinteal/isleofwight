@@ -207,6 +207,130 @@ function set_up_band_db(){
 		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (125, "The Nelson Brothers", "Hard Rock Stage", 20150614, 1700, 1800, 0, 2, "Sunday", "video_link_HERE")');
 		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (126, "Ella Janes", "Hard Rock Stage", 20150614, 1600, 1700, 0, 2, "Sunday", "video_link_HERE")');
 			tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (127, "Thundernauts", "Hard Rock Stage", 20150614, 1500, 1600, 0, 2, "Sunday", "video_link_HERE")');
+	});
+	
+	
+	//updates here
+	db.transaction(function(tx){
+		
+		//insertions sunday
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (128, "Dreamer Joe", "Main Stage", 20150614, 1110, 1135, 0, 0, "Sunday", "video_link_HERE")');
+		//insertions saturday
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (129, "Charlie Hedges", "Big Top", 20150613, 2200, 2330, 0, 1, "Saturday", "video_link_HERE")');
+		
+		tx.executeSql('DELETE FROM bands WHERE id=65');//delete tim arnold as soho hobo is him
+tx.executeSql('UPDATE bands SET start_time=2015, finish_time=2100, band_name="Tim Arnold The Soho Hobo" WHERE id=121');
+		
+		
+		
+		//update times fri main stage
+tx.executeSql('UPDATE bands SET start_time=1600, finish_time=1630 WHERE id=7');
+tx.executeSql('UPDATE bands SET start_time=1655, finish_time=1725 WHERE id=6');
+tx.executeSql('UPDATE bands SET start_time=1755, finish_time=1850 WHERE id=4');
+tx.executeSql('UPDATE bands SET start_time=1920, finish_time=2015 WHERE id=3');
+tx.executeSql('UPDATE bands SET start_time=2045, finish_time=2200 WHERE id=1');
+tx.executeSql('UPDATE bands SET start_time=2230, finish_time=0000 WHERE id=2');
+		//sat times main stage
+tx.executeSql('UPDATE bands SET start_time=1430, finish_time=1510 WHERE id=13');
+tx.executeSql('UPDATE bands SET start_time=1540, finish_time=1620 WHERE id=5');
+tx.executeSql('UPDATE bands SET start_time=1650, finish_time=1730 WHERE id=12');
+tx.executeSql('UPDATE bands SET start_time=1800, finish_time=1850 WHERE id=11');
+tx.executeSql('UPDATE bands SET start_time=1920, finish_time=2010 WHERE id=8');
+tx.executeSql('UPDATE bands SET start_time=2040, finish_time=2140 WHERE id=9');
+tx.executeSql('UPDATE bands SET start_time=2210, finish_time=0000 WHERE id=10');
+
+	//sun main times
+tx.executeSql('UPDATE bands SET start_time=1200, finish_time=1230 WHERE id=21');
+tx.executeSql('UPDATE bands SET start_time=1300, finish_time=1340 WHERE id=19');
+tx.executeSql('UPDATE bands SET start_time=1410, finish_time=1510 WHERE id=20');
+tx.executeSql('UPDATE bands SET start_time=1540, finish_time=1620 WHERE id=14');
+tx.executeSql('UPDATE bands SET start_time=1650, finish_time=1735 WHERE id=15');
+tx.executeSql('UPDATE bands SET start_time=1805, finish_time=1855 WHERE id=16');
+tx.executeSql('UPDATE bands SET start_time=1925, finish_time=2025 WHERE id=17');
+tx.executeSql('UPDATE bands SET start_time=2055, finish_time=2255 WHERE id=18');
+		
+		//thurs big top
+tx.executeSql('UPDATE bands SET start_time=1800, finish_time=1840 WHERE id=25');
+tx.executeSql('UPDATE bands SET start_time=1905, finish_time=2000 WHERE id=24');
+tx.executeSql('UPDATE bands SET start_time=2030, finish_time=2130 WHERE id=23');
+tx.executeSql('UPDATE bands SET start_time=2200, finish_time=2300 WHERE id=22');
+
+
+		//fri big top
+tx.executeSql('UPDATE bands SET start_time=1630, finish_time=1700 WHERE id=33');
+tx.executeSql('UPDATE bands SET start_time=1730, finish_time=1800 WHERE id=32');
+tx.executeSql('UPDATE bands SET start_time=1845, finish_time=1925 WHERE id=30');
+tx.executeSql('UPDATE bands SET start_time=1955, finish_time=2035 WHERE id=31');
+tx.executeSql('UPDATE bands SET start_time=2105, finish_time=2145 WHERE id=28');
+tx.executeSql('UPDATE bands SET start_time=2215, finish_time=2315 WHERE id=27');
+tx.executeSql('UPDATE bands SET start_time=2345, finish_time=0100 WHERE id=26');
+
+		//sat big top
+tx.executeSql('UPDATE bands SET start_time=1245, finish_time=1320 WHERE id=42');
+tx.executeSql('UPDATE bands SET start_time=1345, finish_time=1420 WHERE id=41');
+tx.executeSql('UPDATE bands SET start_time=1450, finish_time=1530 WHERE id=40');
+tx.executeSql('UPDATE bands SET start_time=1600, finish_time=1640 WHERE id=39');
+tx.executeSql('UPDATE bands SET start_time=1710, finish_time=1755 WHERE id=38');
+tx.executeSql('UPDATE bands SET start_time=1825, finish_time=1910 WHERE id=36');
+tx.executeSql('UPDATE bands SET start_time=1940, finish_time=2025 WHERE id=35');
+tx.executeSql('UPDATE bands SET start_time=2055, finish_time=2155 WHERE id=37');
+tx.executeSql('UPDATE bands SET start_time=2340, finish_time=0100 WHERE id=34');
+
+		//sun big top
+tx.executeSql('UPDATE bands SET start_time=1115, finish_time=1135 WHERE id=53');
+tx.executeSql('UPDATE bands SET start_time=1200, finish_time=1230 WHERE id=52');
+tx.executeSql('UPDATE bands SET start_time=1300, finish_time=1335 WHERE id=29');
+tx.executeSql('UPDATE bands SET start_time=1405, finish_time=1445 WHERE id=48');
+tx.executeSql('UPDATE bands SET start_time=1515, finish_time=1600 WHERE id=47');
+tx.executeSql('UPDATE bands SET start_time=1630, finish_time=1715 WHERE id=44');
+tx.executeSql('UPDATE bands SET start_time=1745, finish_time=1840 WHERE id=43');
+tx.executeSql('UPDATE bands SET start_time=1910, finish_time=2010 WHERE id=46');
+tx.executeSql('UPDATE bands SET start_time=2025, finish_time=2110 WHERE id=49');
+tx.executeSql('UPDATE bands SET start_time=2110, finish_time=2140 WHERE id=51');
+tx.executeSql('UPDATE bands SET start_time=2140, finish_time=2225 WHERE id=50');
+tx.executeSql('UPDATE bands SET start_time=2240, finish_time=0000 WHERE id=45');
+		
+		
+		//thurs hard rock
+tx.executeSql('UPDATE bands SET start_time=1815, finish_time=1845 WHERE id=108');
+tx.executeSql('UPDATE bands SET start_time=1900, finish_time=1930 WHERE id=107');
+tx.executeSql('UPDATE bands SET start_time=1945, finish_time=2030 WHERE id=64');
+tx.executeSql('UPDATE bands SET start_time=2045, finish_time=2145 WHERE id=106');
+
+		//fri hard rock
+tx.executeSql('UPDATE bands SET start_time=1615, finish_time=1645 WHERE id=113');
+tx.executeSql('UPDATE bands SET start_time=1700, finish_time=1730 WHERE id=58');
+tx.executeSql('UPDATE bands SET start_time=1745, finish_time=1820 WHERE id=112');
+tx.executeSql('UPDATE bands SET start_time=1845, finish_time=1925 WHERE id=60');
+tx.executeSql('UPDATE bands SET start_time=1945, finish_time=2030 WHERE id=111');
+tx.executeSql('UPDATE bands SET start_time=2045, finish_time=2130 WHERE id=110');
+tx.executeSql('UPDATE bands SET start_time=2145, finish_time=2230 WHERE id=109');
+
+		//sat hard rock
+tx.executeSql('UPDATE bands SET start_time=1215, finish_time=1245 WHERE id=120');
+tx.executeSql('UPDATE bands SET start_time=1300, finish_time=1330 WHERE id=57');
+tx.executeSql('UPDATE bands SET start_time=1340, finish_time=1420 WHERE id=119');
+tx.executeSql('UPDATE bands SET start_time=1430, finish_time=1510 WHERE id=118');
+tx.executeSql('UPDATE bands SET start_time=1830, finish_time=1915 WHERE id=116');
+tx.executeSql('UPDATE bands SET start_time=1930, finish_time=2015 WHERE id=115');
+tx.executeSql('UPDATE bands SET start_time=2030, finish_time=2115 WHERE id=61');
+tx.executeSql('UPDATE bands SET start_time=2130, finish_time=2220 WHERE id=59');
+tx.executeSql('UPDATE bands SET start_time=2345, finish_time=0030 WHERE id=114');
+
+		//sun hard rock
+tx.executeSql('UPDATE bands SET start_time=1200, finish_time=1225 WHERE id=127');
+tx.executeSql('UPDATE bands SET start_time=1235, finish_time=1305 WHERE id=126');
+tx.executeSql('UPDATE bands SET start_time=1325, finish_time=1425 WHERE id=66');
+tx.executeSql('UPDATE bands SET start_time=1415, finish_time=1445 WHERE id=55');
+tx.executeSql('UPDATE bands SET start_time=1500, finish_time=1530 WHERE id=125');
+tx.executeSql('UPDATE bands SET start_time=1530, finish_time=1630 WHERE id=62');
+tx.executeSql('UPDATE bands SET start_time=1545, finish_time=1615 WHERE id=124');
+tx.executeSql('UPDATE bands SET start_time=1630, finish_time=1710 WHERE id=63');
+tx.executeSql('UPDATE bands SET start_time=1700, finish_time=1800 WHERE id=117');
+tx.executeSql('UPDATE bands SET start_time=1725, finish_time=1800 WHERE id=56');
+tx.executeSql('UPDATE bands SET start_time=1820, finish_time=1900 WHERE id=123');
+tx.executeSql('UPDATE bands SET start_time=1915, finish_time=2000 WHERE id=122');
+tx.executeSql('UPDATE bands SET start_time=2230, finish_time=2300 WHERE id=54');
 		
 		set_up_main_page();
 	});
