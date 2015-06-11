@@ -425,6 +425,13 @@ tx.executeSql('UPDATE bands SET start_time=1920, finish_time=2000, day=20150614,
 		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (145, "Sandy Rivera", "Strongbow Tree", 20150614, 1800, 1900, 0, 4, "Sunday", "video_link_HERE")');
 		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (146, "Copyright", "Strongbow Tree", 20150614, 2100, 0000, 0, 4, "Sunday", "video_link_HERE")');
 		
+	});
+	
+	db.transaction(function(tx){
+		
+		//addition sat main stage
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (147, "Ward Thomas", "Main Stage", 20150613, 1220, 1250, 0, 0, "Saturday", "video_link_HERE")');
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name, video_link) VALUES (148, "Nothing But Thieves", "Main Stage", 20150613, 1320, 1400, 0, 0, "Saturday", "video_link_HERE")');
 		
 		set_up_main_page();
 	});
